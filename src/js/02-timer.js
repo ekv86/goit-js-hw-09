@@ -36,6 +36,7 @@ startBtn.addEventListener('click', onClick);
 
 function onClick(evt) {
     const idInterval = setInterval(() => {
+        startBtn.setAttribute('disabled', 'disabled');
         const deltaTime = selectedDate - Date.now();
         const deltaTimeObj = convertMs(deltaTime);
         daysEl.textContent = deltaTimeObj.days;
